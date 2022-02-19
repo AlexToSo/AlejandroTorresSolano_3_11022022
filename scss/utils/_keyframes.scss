@@ -1,8 +1,77 @@
-@keyframes loader {
+@keyframes loader-screen {
     0% {
-        transform: rotate(-90deg);
+        visibility: visible;
+    }
+}
+
+@keyframes loader-pan {
+    0% {
+        transform: translate(20%,20%) rotate(-30deg);
+    }
+    20% {
+        transform: translate(-15%,-10%) rotate(20deg);
+    }
+    80% {
+        transform: translate(15%,15%) rotate(-10deg);
+        animation-timing-function: cubic-bezier(.03,.4,.97,.58);
     }
     100% {
-        transform: rotate(90deg);
+        transform: translate(20%,20%) rotate(-30deg);
+        animation-timing-function: cubic-bezier(.1,.31,.9,.61);
+    }
+}
+
+@keyframes loader-steak {
+    // 19% {
+    //     transform: translateY(0) rotate(0 + 2 * count);
+    //     // opacity: 100%;
+    // }
+    // 50% {
+    //     // $steak-turns : $steak-turns + $steak-turn-per-shake;
+    //     transform: translateY(-1000%) rotate(1turn);
+    //     animation-timing-function: ease-out;
+    //     // opacity: 100%;
+    // }
+    // 80% {
+    //     // $steak-turns : $steak-turns + $steak-turn-per-shake;
+    //     transform: translateY(0) rotate(2turn);
+    //     animation-timing-function: ease-in;
+    //     // opacity: 0%;
+    // }
+    6% {
+        transform: translateY(0) rotate(0);
+    }
+    17% {
+        transform: translateY(-1000%) rotate(1turn);
+        animation-timing-function: ease-out;
+    }
+    27% {
+        transform: translateY(0) rotate(2turn);
+        animation-timing-function: ease-in;
+    }
+    40% {
+        transform: translateY(0) rotate(2turn);
+    }
+    50% {
+        transform: translateY(-1000%) rotate(3turn);
+        animation-timing-function: ease-out;
+    }
+    60% {
+        transform: translateY(0) rotate(4turn);
+        animation-timing-function: ease-in;
+    }
+    73% {
+        transform: translateY(0) rotate(4turn);
+    }
+    84% {
+        transform: translateY(-1000%) rotate(5turn);
+        animation-timing-function: ease-out;
+    }
+    94% {
+        transform: translateY(0) rotate(6turn);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translateY(0) rotate(6turn);
     }
 }

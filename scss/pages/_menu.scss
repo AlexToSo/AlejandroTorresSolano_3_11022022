@@ -1,0 +1,10 @@
+.restaurant {
+    &__image {
+        height: 30rem;
+        width: 100%;
+        @include img-ratio;
+    }
+    &__menu {
+        border-radius: 2rem 2rem 0 0;
+    }
+}

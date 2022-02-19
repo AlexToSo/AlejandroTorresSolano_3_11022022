@@ -7,22 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- <link rel="stylesheet" media="screen and (max-width: 992px)" href="css/style_tablet.css"> -->
     <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/style_phone.css"> -->
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader__cooking">
+            <div class="loader__cooking__pan">
+                <img src="assets/logo/frying-pan.png" alt="loader pan">
+            </div>
+            <div class="loader__cooking__steak">
+            </div>
+        </div>
+    </div>
     <div class="container">
         <header class="header">
-            <a href="home.html"><span><i class="fas fa-arrow-left"></i></span></a>
-            <div class="title">
-                <img src="assets/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
-            </div>
+            <a href="home.html"><i class="fas fa-arrow-left"></i></a>
+            <h1 class="logo">
+                ohmyfood
+            </h1>
         </header>
-        <div class="restaurant">
+        <main class="restaurant">
             <div class="restaurant__image">
                 <img src="assets/images/La-palette-du-gout.jpg" alt="round dish small food">
             </div>
@@ -41,9 +51,9 @@
                         </h1>
                         <div>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Fricassée d'escargot
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Au piment d'Espelette
@@ -54,9 +64,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Foie gras de canard mi-cuit
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Et ses copeaux de truffe noire
@@ -67,9 +77,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Oeuf au plat
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Assaisonné à la truffe sur lit de caviar
@@ -87,9 +97,9 @@
                         </h1>
                         <div>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Filet de boeuf aux herbes
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Accompagné de sa ribambelle de légumes
@@ -100,9 +110,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Parmentier de queue de boeuf
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         À la truffe noire sur sa purée de panais
@@ -113,9 +123,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Filet de turbot
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Aux agrumes
@@ -133,9 +143,9 @@
                         </h1>
                         <div>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Paris-Brest
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Revisité
@@ -146,9 +156,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Macaron au chocolat d'exception
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Et glace à la vanille de Madagascar
@@ -159,9 +169,9 @@
                                 </div>
                             </a>
                             <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
+                                <h3 class="meal__dish__name">
                                     Mousse au chocolat
-                                </h1>
+                                </h3>
                                 <div>
                                     <p class="meal__dish__ingredients">
                                         Au piment d'Espelette et à la truffe noire
@@ -176,14 +186,14 @@
                 </div>
                 <button class="btn">Commander</button>
             </div>
-        </div>
+        </main>
         <footer class="footer">
-            <div class="title tittle--small">
-                <img src="assets/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
-            </div>
+            <h1 class="logo">
+                ohmyfood
+            </h1>
             <ul>
                 <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a href="#"><i class="fas fa-handshake"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
                 <li><a href="#">Mentions légales</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>

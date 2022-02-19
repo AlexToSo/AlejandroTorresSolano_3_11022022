@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include color-layout(lighten($colour-black,25%));
+    padding: 3rem;
+    h1 {
+        font-size: 4rem;
+    }
+    a {
+        color: white;
+    }
+    li {
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    ul {
+        list-style: none;
+    }
+}

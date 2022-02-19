@@ -1,11 +1,35 @@
-.load {
+.loader {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    &__cutlery {
-        transform-origin: 50% -80%;
-        // transform: translateY(-1000%);
-        animation: loader 1000ms 3 ease-in-out alternate;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    visibility: hidden;
+    z-index: 10;
+    opacity: 90%;
+    animation: loader-screen 3000ms;
+    &__cooking {
+        position: relative;
+        transform: rotate(-20deg);
+        transform-origin: 120% 50%;
+        animation: loader-pan 1000ms 3 ease-in-out;
+        // z-index: 9;
+        &__pan {
+            z-index: 1;
+        }
+        &__steak {
+            @include round;
+            z-index: -1;
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            width: 12rem;
+            height: 3rem;
+            background: $colour-primary;
+            animation: loader-steak 3000ms both;
+        }
     }
 }
 
@@ -27,8 +51,10 @@
     align-items: center;
     background-color: lighten($colour-grey,55%);
     padding: 5rem;
+    text-align: center;
     p {
         color: $colour-grey;
+        padding: 3rem;
     }
 }
 
@@ -40,19 +66,27 @@
         align-items: center;
     }
     &__item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 80rem;
         @include list-item;
         &--bg {
             @include list-item($colour-primary);
         }
+        p {
+            font-weight: 700;
+        }
     }
 }
 
+main {
+    width: 100%;
+    background-color: lighten($colour-grey,55%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .rest-prev {
-    width: 50rem;
+    width: 65rem;
+    margin-bottom: 5rem;
     background-color: $colour-white;
     overflow: hidden;
     @include round;
@@ -62,6 +96,13 @@
         @include img-ratio;
     }
     &__text {
-        padding-left: 1.5rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            font-size: 5rem;
+        }
     }
 }
