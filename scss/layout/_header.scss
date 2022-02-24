@@ -1,3 +1,7 @@
+header{
+    width: 100%;
+}
+
 .header {
     @include shadow(darken($colour-white,50%));
     width: 100%;

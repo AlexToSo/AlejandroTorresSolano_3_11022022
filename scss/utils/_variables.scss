@@ -10,7 +10,14 @@ $heading-shadow-size: 0.5rem;
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25;
 
+$transition-time: 250ms;
+$anim-delay: 100ms;
+
 $border-radius: 5rem;
 
 $steak-turns: 0turn;
 $steak-turn-per-shake: 1turn;
+
+$breakpoints: (
+    mobile: 992px
+);

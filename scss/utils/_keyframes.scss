@@ -75,3 +75,23 @@
         transform: translateY(0) rotate(6turn);
     }
 }
+
+@keyframes appear {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tick {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(100%);
+    }
+}

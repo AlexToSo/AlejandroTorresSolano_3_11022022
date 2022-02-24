@@ -17,17 +17,62 @@
     }
 }
 
+@mixin opacity-transition($time:$transition-time) {
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity $time;
+    }
+}
+
+@mixin heart {
+    // i {
+    font-size: 5rem;
+        // color: white;
+        // border: 1px solid black;
+    // }
+    // i g g path {
+    //     stroke: black;
+    //     stroke-width: 10;
+    //   }
+    @include opacity-transition;
+    &::after {
+        // background: -webkit-gradient($colour-secondary,$colour-primary);
+        // background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-primary));
+	    // -webkit-background-clip: text;
+	    // -webkit-text-fill-color: transparent;
+        // color: linear-gradient($colour-secondary,$colour-primary);
+        color: red;
+    }
+}
+
 @mixin btn {
-    padding: $grid-gutter;
+    margin: 5rem;
+    padding: 3rem;
     @include round;
     @include shadow(darken($colour-white,50%));
     color: $colour-white;
     border: 0;
     background: linear-gradient($colour-secondary,$colour-primary);
-    padding: 3rem;
     cursor: pointer;
-    &:hover{
-        background: linear-gradient($colour-primary,$colour-secondary);
+    @include opacity-transition;
+    &::after {
+        background: linear-gradient(lighten($colour-secondary,10%),lighten($colour-primary,10%));
+        @include round;
+        @include shadow(darken($colour-white,90%));
     }
 }
 
@@ -35,9 +80,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 60rem;
-    padding: $grid-gutter * 3;
-    margin: $grid-gutter * 2;
+    width: 90%;
+    margin: 3rem;
+    padding: 3rem;
     @include round;
     @include shadow(darken($colour-white,30%));
     background-color: lighten($colour,55%);
@@ -66,4 +111,10 @@
         color: $colour-black;
     }
     background-color: $colour;
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
 }

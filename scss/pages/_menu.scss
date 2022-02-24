@@ -36,25 +36,86 @@
     max-width: 70rem;
     width: 90%;
     margin: auto;
+
+    h2 {
+        animation: appear $transition-time * 2 3s both;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 3rem;
+        position: relative;
+        &::after {
+            content: "";
+            width: 8rem;
+            height: 0.5rem;
+            background-color: $colour-tertiary;
+            position: absolute;
+            left: 2rem;
+            bottom: 1rem;
+        }
+    }
+    a {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin: 3rem;
+        @include round(3rem);
+        background-color: white;
+        @include shadow(darken($colour-white,30%));
+        &:hover {
+            & .meal__tick {
+                flex: 1.5;
+                i {
+                    transform: rotate(2turn);
+                }
+            }
+            
+        }
+    }
+    
     &__dish {
-        // width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
-        margin: 3rem;
-        padding: 2rem;
-        @include round(3rem);
-        background-color: white;
-        @include shadow(darken($colour-white,30%));
+        flex: 4;
+        
+
+        animation: appear $transition-time * 2 both;
+        @for $i from 1 through 4 {
+            &--#{$i} {
+                animation-delay: 3s + $anim-delay * $i;
+            } 
+        }
+
         
         &__name {
-            // display: inline-block;
-            width: 80%;
-            // flex: 4;
+            padding: 2rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            // width: 40rem;
+        }
+        &__price {
+            padding: 2rem;
+        //     width: 20rem;
+        }
+    }
+
+    &__tick {
+        margin-right: -10rem;
+        background-color: $colour-tertiary;
+        flex: 0;
+        transition: flex 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 2rem;
+        i {
+            color: white;
+            font-size: 4rem;
+            transition: transform 0.5s;
+            transform: rotate(0turn);
         }
     }
 }
