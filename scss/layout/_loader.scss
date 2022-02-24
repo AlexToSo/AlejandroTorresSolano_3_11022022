@@ -15,7 +15,6 @@
         transform: rotate(-20deg);
         transform-origin: 120% 50%;
         animation: loader-pan 1000ms 3 ease-in-out;
-        // z-index: 9;
         &__pan {
             z-index: 1;
         }

@@ -6,7 +6,6 @@
     align-items: center;
     color: darken($colour-grey,20%);
     background-color: lighten($colour-grey,50%);
-    
 }
 
 .message {
@@ -23,10 +22,6 @@
     }
 }
 
-section {
-    width: 100%;
-}
-
 .operation {
     max-width: 70rem;
     width: 90%;
@@ -35,18 +30,9 @@ section {
     > div {
         display: flex;
         flex-direction: column;
-        @media screen and (min-width: map-get($breakpoints, mobile)){
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center; 
-        }
-
-        
-        // flex-wrap: wrap;
-        
     }
+
     &__item {
-        
         @include list-item;
         &--bg {
             @include list-item($colour-primary);
@@ -58,14 +44,23 @@ section {
             text-overflow: ellipsis;
         }
     }
+
+    @include desktop-only {
+        > div {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 70rem;
+        }
+        max-width: 100%;
+    }
 }
 
 main {
-    width: 100%;
     background-color: lighten($colour-grey,55%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .restaurants {
@@ -76,34 +71,30 @@ main {
         display: flex;
         flex-direction: column;
     }
-    @media screen and (min-width: map-get($breakpoints, mobile)){
+    
+    @include desktop-only{
         & > div {
             flex-direction: row;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
         max-width: 100%;
     }
-    
-    
-    
 }
 
 .rest-prev {
-    // width: 90%;
+    width: 65rem;
     margin-bottom: 5rem;
     background-color: $colour-white;
     overflow: hidden;
     @include round;
     @include shadow($colour-grey);
 
-    @media screen and (min-width: map-get($breakpoints, mobile)){
-        width: 50rem;
-    }
-
     &__image {
         height: 30rem;
         @include img-ratio;
     }
+
     &__text {
         padding: 2rem;
         display: flex;
@@ -111,13 +102,9 @@ main {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        // h3, p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        // }
-        
-        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .fa-heart {
         @include heart;

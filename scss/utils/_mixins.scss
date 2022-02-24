@@ -2,7 +2,7 @@
     border-radius: $radius;
 }
 
-@mixin shadow($colour:$colour-grey, $offset:$heading-shadow-size){
+@mixin shadow($colour:$colour-grey, $offset:$shadow-size){
     box-shadow: 0 $offset 2rem $colour;
 }
 
@@ -17,7 +17,7 @@
     }
 }
 
-@mixin opacity-transition($time:$transition-time) {
+@mixin opacity-transition($time:$anim-duration) {
     position: relative;
     z-index: 1;
     &:hover {
@@ -38,8 +38,8 @@
     }
 }
 
+////////////// Ne marche pas //////////////
 @mixin heart {
-    // i {
     font-size: 5rem;
         // color: white;
         // border: 1px solid black;
@@ -97,9 +97,10 @@
         background-color: $colour-primary;
         color: $colour-white;
         @include round;
-        padding: 1rem 1.8rem;
+        padding: 0.4rem 1.8rem;
         width: 5rem;
         height: 5rem;
+        font-size: 3rem;
     }
 }
 
@@ -113,8 +114,8 @@
     background-color: $colour;
 }
 
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)){
         @content;
     }
 }

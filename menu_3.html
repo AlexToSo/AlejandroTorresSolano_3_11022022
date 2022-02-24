@@ -7,186 +7,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" media="screen and (max-width: 992px)" href="css/style_tablet.css"> -->
-    <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/style_phone.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader__cooking">
+            <div class="loader__cooking__pan">
+                <img src="assets/logo/frying-pan.png" alt="loader pan">
+            </div>
+            <div class="loader__cooking__steak">
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <header class="header">
-            <a href="home.html"><span><i class="fas fa-arrow-left"></i></span></a>
-            <div class="title">
-                <img src="assets/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
+        <header>
+            <div class="header">
+                <a href="home.html" class="header__arrow"><i class="fas fa-arrow-left"></i></a>
+                <h1 class="logo">
+                    ohmyfood
+                </h1> 
             </div>
         </header>
-        <div class="restaurant">
+        <main class="restaurant">
             <div class="restaurant__image">
                 <img src="assets/images/A-la-francaise.jpg" alt="round dish sauce food">
             </div>
             <div class="restaurant__menu">
-                <div>
+                <div class="restaurant__menu__name">
                     <h1>
                         À la française
                     </h1>
                     <span><i class="far fa-heart"></i></span>
                 </div>
-                
-                <div>
+                <div class="restaurant__menu__body">
                     <section class="meal">
-                        <h1>
+                        <h2>
                             Entrées
-                        </h1>
+                        </h2>
                         <div>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Tartare de poulpe acidulé
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Aux zests d'orange
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>25€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--1">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Tartare de poulpe acidulé
+                                        </h3>
+                                        <p>
+                                            Aux zests d'orange
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>25€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Velouté de légumes d'antan
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Carotte, panais, topinambour
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>35€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--2">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Velouté de légumes d'antan
+                                        </h3>
+                                        <p>
+                                            Carotte, panais, topinambour
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>35€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Soupe à l'oignon
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Revisitée
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>20€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--3">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Soupe à l'oignon
+                                        </h3>
+                                        <p>
+                                            Revisitée
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>20€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
                         </div>
                     </section>
                     <section class="meal">
-                        <h1>
+                        <h2>
                             Plats
-                        </h1>
+                        </h2>
                         <div>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Coquilles Saint-Jacques
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Accompagnées d'une purée de panais
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>40€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--1">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Coquilles Saint-Jacques
+                                        </h3>
+                                        <p>
+                                            Accompagnées d'une purée de panais
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>40€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Magret de canard
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Et parmentier de pommes de terres
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>35€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--2">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Magret de canard
+                                        </h3>
+                                        <p>
+                                            Et parmentier de pommes de terres
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>35€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Pigeonneau d'Ille-et-Vilaine
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Sur son lit de gnocchis aux légumes
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>44€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--3">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Pigeonneau d'Ille-et-Vilaine
+                                        </h3>
+                                        <p>
+                                            Sur son lit de gnocchis aux légumes
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>44€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
                         </div>
                     </section>
                     <section class="meal">
-                        <h1>
+                        <h2>
                             Desserts
-                        </h1>
+                        </h2>
+                        
                         <div>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Pétales de violettes glacés
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Et purée de noisettes
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>18€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--1">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Pétales de violettes glacés
+                                        </h3>
+                                        <p>
+                                            Et purée de noisettes
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>18€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Fondant au chocolat
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Revisité
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>22€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--2">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Fondant au chocolat
+                                        </h3>
+                                        <p>
+                                            Revisité
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>22€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
-                            <a href="#" class="meal__dish">
-                                <h1 class="meal__dish__name">
-                                    Millefeuille croustillant
-                                </h1>
-                                <div>
-                                    <p class="meal__dish__ingredients">
-                                        Myrtilles et pâte d'amande
-                                    </p>
-                                    <p class="meal__dish__price">
-                                        <strong>23€</strong>
-                                    </p>
+                            <a href="#">
+                                <div class="meal__dish meal__dish--3">
+                                    <div class="meal__dish__name">
+                                        <h3>
+                                            Millefeuille croustillant
+                                        </h3>
+                                        <p>
+                                            Myrtilles et pâte d'amande
+                                        </p>
+                                    </div>
+                                    <div class="meal__dish__price">
+                                        <p>
+                                            <strong>23€</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="meal__tick">
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                             </a>
                         </div>
                     </section>
                 </div>
-                <button class="btn">Commander</button>
+                <button class="btn">
+                    Commander
+                </button>
             </div>
-        </div>
-        <footer class="footer">
-            <div class="title tittle--small">
-                <img src="assets/logo/ohmyfood@2x.svg" alt="Ohmyfood logo">
+        </main>
+        <footer>
+            <div class="footer">
+                <h1 class="logo">
+                    ohmyfood
+                </h1>
+                <ul>
+                    <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a href="#"><i class="fas fa-handshake"></i>Proposer un restaurant</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </footer>
     </div>
 </body>
