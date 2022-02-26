@@ -1,8 +1,8 @@
-@mixin round($radius:$border-radius) {
+@mixin round($radius: $border-radius) {
     border-radius: $radius;
 }
 
-@mixin shadow($colour:$colour-grey, $offset:$shadow-size){
+@mixin shadow($colour: $colour-grey, $offset: $shadow-size) {
     box-shadow: 0 $offset 2rem $colour;
 }
 
@@ -17,7 +17,7 @@
     }
 }
 
-@mixin opacity-transition($time:$anim-duration) {
+@mixin opacity-transition($time: $anim-duration) {
     position: relative;
     z-index: 1;
     &:hover {
@@ -38,62 +38,40 @@
     }
 }
 
-////////////// Ne marche pas //////////////
-@mixin heart {
-    font-size: 5rem;
-        // color: white;
-        // border: 1px solid black;
-    // }
-    // i g g path {
-    //     stroke: black;
-    //     stroke-width: 10;
-    //   }
-    @include opacity-transition;
-    &::after {
-        // background: -webkit-gradient($colour-secondary,$colour-primary);
-        // background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-primary));
-	    // -webkit-background-clip: text;
-	    // -webkit-text-fill-color: transparent;
-        // color: linear-gradient($colour-secondary,$colour-primary);
-        color: red;
-    }
-}
-
 @mixin btn {
     margin: 5rem;
     padding: 3rem;
     @include round;
-    @include shadow(darken($colour-white,50%));
+    @include shadow(darken($colour-white, 50%));
     color: $colour-white;
     border: 0;
-    background: linear-gradient($colour-secondary,$colour-primary);
+    background: linear-gradient($colour-secondary, $colour-primary);
     cursor: pointer;
     @include opacity-transition;
     &::after {
-        background: linear-gradient(lighten($colour-secondary,10%),lighten($colour-primary,10%));
+        background: linear-gradient(lighten($colour-secondary, 10%), lighten($colour-primary, 10%));
         @include round;
-        @include shadow(darken($colour-white,90%));
+        @include shadow(darken($colour-white, 90%));
     }
 }
 
-@mixin list-item($colour:$colour-grey) {
-    display: flex;
-    flex-direction: row;
+@mixin list-item($colour: darken($colour-white, 5%)) {
+    @include flex-row;
     align-items: center;
-    width: 90%;
+    width: $mobile-block-width;
     margin: 3rem;
     padding: 3rem;
     @include round;
-    @include shadow(darken($colour-white,30%));
-    background-color: lighten($colour,55%);
+    @include shadow(darken($colour-white, 30%));
+    background-color: $colour;
     i {
-        color: $colour;
+        color: darken($colour,40%);
     }
     position: relative;
     span {
         position: absolute;
         top: 30%;
-        left: -3%;
+        left: -3rem;
         background-color: $colour-primary;
         color: $colour-white;
         @include round;
@@ -104,18 +82,33 @@
     }
 }
 
-@mixin color-layout($colour:$colour-white) {
-    @if ( lightness($colour) < 50% ) {
+@mixin color-layout($colour: $colour-white) {
+    @if (lightness($colour) < 50%) {
         color: $colour-white;
-    }
-    @else {
+    } @else {
         color: $colour-black;
     }
     background-color: $colour;
 }
 
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin desktop-only {
-    @media screen and (min-width: map-get($breakpoints, mobile)){
+    @media screen and (min-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }

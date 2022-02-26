@@ -1,57 +1,59 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 5rem;
 }
 
 h1 {
-    font-family: 'Shrikhand', sans-serif;
-    font-weight: 400;
+    font-family: "Shrikhand", sans-serif;
     font-size: 6rem;
+    font-weight: 400;
+
     margin: 2rem;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-family: "Roboto", sans-serif;
     font-size: 5rem;
+    font-weight: 700;
+    
     padding: 2rem;
 }
 
 h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-family: "Roboto", sans-serif;
     font-size: 3rem;
+    font-weight: 700;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
     font-size: 3rem;
+    font-weight: 400;
 }
 
 i {
     font-size: 3rem;
     padding: 1rem;
-    margin: 1rem;
+    margin-right: 1rem;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-family: "Roboto", sans-serif;
     font-size: 2.75rem;
+    font-weight: 900;
 }
 
 a {
-    color: black;
+    color: $colour-black;
     text-decoration: none;
 }
 
 li {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
     font-size: 3rem;
+    font-weight: 400;
 }
 
 ul {

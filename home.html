@@ -22,40 +22,46 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="page">
         <header>
             <div class="header">
                 <h1 class="logo">
                     ohmyfood
-                </h1> 
+                </h1>
             </div>
         </header>
-        <section class="location">
-            <span><i class="fas fa-map-marker-alt"></i></span>
-            <p>
-                Paris, Belleville
-            </p>
-        </section>
-        <section class="message">
-            <h2>
-                Réservez le menu qui vous convient
-            </h2>
-            <p>
-                Découvrez des restaurants d'exception, séléctionnés par nos soins.
-            </p>
-            <button class="btn">
-                Explorer nos restaurants
-            </button>
-        </section>
         <section>
+            <div class="location">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <p>
+                    Paris, Belleville
+                </p>
+            </div>
+            <div class="message">
+                <h2>
+                    Réservez le menu qui vous convient
+                </h2>
+                <p>
+                    Découvrez des restaurants d'exception, séléctionnés par nos soins.
+                </p>
+                <button class="btn">
+                    Explorer nos restaurants
+                </button>
+            </div>
             <div class="operation">
                 <h2>
                     Fonctionnement
                 </h2>
-                <div>
-                    <div class="operation__item"><span>1</span><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></div>
-                    <div class="operation__item"><span>2</span><i class="fas fa-list"></i><p>Composez votre menu</p></div>
-                    <div class="operation__item operation__item--bg"><span>3</span><i class="fas fa-store"></i><p>Dégustez au restaurant</p></div>
+                <div class="operation__block">
+                    <div class="operation__block__item"><span>1</span><i class="fas fa-mobile-alt"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                    <div class="operation__block__item"><span>2</span><i class="fas fa-list"></i>
+                        <p>Composez votre menu</p>
+                    </div>
+                    <div class="operation__block__item operation__block__item--bg"><span>3</span><i class="fas fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,8 +74,7 @@
                     <article class="rest-prev rest-prev--new">
                         <a href="menu_1.html">
                             <div class="rest-prev__image">
-                                <img src="assets/images/La-palette-du-gout.jpg"
-                                alt="round dish small food">
+                                <img src="assets/images/La-palette-du-gout.jpg" alt="round dish small food">
                             </div>
                             <div class="rest-prev__text">
                                 <div>
@@ -78,18 +83,17 @@
                                         Ménilmontant
                                     </p>
                                 </div>
-                                <!-- <span class="heart"> -->
-                                    <i class="fas fa-heart"></i>
-                                    <!-- <i class="fas fa-hear heart__bg"></i> -->
-                                <!-- </span> -->
+                                <div class="heart">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart heart__bg"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
                     <article class="rest-prev rest-prev--new">
                         <a href="menu_2.html">
                             <div class="rest-prev__image">
-                                <img src="assets/images/La-note-enchantee.jpg"
-                                alt="round dish food from top">
+                                <img src="assets/images/La-note-enchantee.jpg" alt="round dish food from top">
                             </div>
                             <div class="rest-prev__text">
                                 <div>
@@ -98,15 +102,17 @@
                                         Charonne
                                     </p>
                                 </div>
-                                <i class="far fa-heart"></i>
+                                <div class="heart">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart heart__bg"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
                     <article class="rest-prev">
                         <a href="menu_3.html">
                             <div class="rest-prev__image">
-                                <img src="assets/images/A-la-francaise.jpg"
-                                alt="round dish sauce food">
+                                <img src="assets/images/A-la-francaise.jpg" alt="round dish sauce food">
                             </div>
                             <div class="rest-prev__text">
                                 <div>
@@ -115,15 +121,17 @@
                                         Cité Rouge
                                     </p>
                                 </div>
-                                <i class="far fa-heart"></i>
+                                <div class="heart">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart heart__bg"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
                     <article class="rest-prev">
                         <a href="menu_4.html">
                             <div class="rest-prev__image">
-                                <img src="assets/images/Le-delice-des-sens.jpg"
-                                alt="long dish asian food">
+                                <img src="assets/images/Le-delice-des-sens.jpg" alt="long dish asian food">
                             </div>
                             <div class="rest-prev__text">
                                 <div>
@@ -132,7 +140,10 @@
                                         Folie-Méricourt
                                     </p>
                                 </div>
-                                <i class="far fa-heart"></i>
+                                <div class="heart">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-heart heart__bg"></i>
+                                </div>
                             </div>
                         </a>
                     </article>
@@ -154,4 +165,5 @@
         </footer>
     </div>
 </body>
+
 </html>

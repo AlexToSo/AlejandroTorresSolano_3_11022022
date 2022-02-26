@@ -1,36 +1,36 @@
 footer{
-    @include color-layout(lighten($colour-black,25%));
+    @include color-layout($colour-grey-bg);
 }
 
 .footer {
-    max-width: 70rem;
-    width: 90%;
+    width: $mobile-block-width;
+    max-width: $mobile-block-max-width;
+    
     margin: auto;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items: flex-start;
 
-    @include desktop-only {
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 100%;
-        }
-        max-width: 100%;
-    }
-    
     h1 {
         font-size: 4rem;
     }
+
     a {
-        color: white;
+        color: $colour-white;
     }
+
     li {
-        height: 5rem;
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         align-items: center;
         padding-right: 2rem;
+    }
+
+    @include desktop-only {
+        max-width: 100%;
+
+        ul {
+            width: 100%;
+            @include flex-row;
+            justify-content: space-around; 
+        }
     }
 }

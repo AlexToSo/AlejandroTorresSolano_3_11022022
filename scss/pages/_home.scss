@@ -1,21 +1,25 @@
 .location {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+
+    @include flex-row;
     justify-content: center;
     align-items: center;
-    color: darken($colour-grey,20%);
-    background-color: lighten($colour-grey,50%);
+
+    color: lighten($colour-black, 20%);
+    background-color: darken($colour-white, 10%);
 }
 
 .message {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lighten($colour-grey,55%);
     padding: 5rem;
+
+    @include flex-column;
+    align-items: center;
+
     text-align: center;
+
+    background-color: darken($colour-white, 5%);
+
     p {
         color: $colour-grey;
         padding: 3rem;
@@ -23,69 +27,76 @@
 }
 
 .operation {
-    max-width: 70rem;
-    width: 90%;
-    margin: auto;
-    
-    > div {
-        display: flex;
-        flex-direction: column;
-    }
+    width: $mobile-block-width;
+    max-width: $mobile-block-max-width;
 
-    &__item {
-        @include list-item;
-        &--bg {
-            @include list-item($colour-primary);
-        }
-        p {
-            font-weight: 700;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+    margin: auto;
+    padding: 5rem 0 5rem 0;
+
+    &__block {
+        @include flex-column;
+
+        &__item {
+            @include list-item;
+
+            p {
+                font-weight: 700;
+                @include ellipsis;
+            }
+
+            &--bg {
+                @include list-item(lighten($colour-primary, 30%));
+            }
         }
     }
 
     @include desktop-only {
-        > div {
-            flex-direction: row;
+        max-width: 100%;
+
+        &__block {
+            @include flex-row;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
+
+            &__item {
+                width: 65rem;
+            }
         }
-        &__item {
-            width: 70rem;
-        }
-        max-width: 100%;
     }
 }
 
 main {
-    background-color: lighten($colour-grey,55%);
+    background-color: darken($colour-white, 5%);
 }
 
 .restaurants {
-    width: 90%;
+    width: $mobile-block-width;
+    max-width: $mobile-block-max-width - 5rem;
+
     margin: auto;
-    max-width: 65rem;
+    padding: 5rem 0 5rem 0;
+
     & > div {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
-    
-    @include desktop-only{
+
+    @include desktop-only {
+        max-width: 100%;
+
         & > div {
-            flex-direction: row;
+            @include flex-row;
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        max-width: 100%;
     }
 }
 
 .rest-prev {
-    width: 65rem;
-    margin-bottom: 5rem;
+    margin: 2.5rem 0 2.5rem 0;
+
     background-color: $colour-white;
+
     overflow: hidden;
     @include round;
     @include shadow($colour-grey);
@@ -97,16 +108,49 @@ main {
 
     &__text {
         padding: 2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+        position: relative;
+        // @include flex-row;
+        // justify-content: space-between;
+        // align-items: center;
+
+        // @include ellipsis;
     }
+
+    @include desktop-only {
+        width: 65rem;
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 30%;
+    right: 3rem;
+    text-align: center;
+
     .fa-heart {
-        @include heart;
+        font-size: 5rem;
+        padding: 1rem;
+    }
+
+    .heart__bg {
+        font-size: 4.5rem;
+        padding-top: 1.2rem;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+
+        background: -webkit-gradient(linear, left top, left bottom, from($colour-secondary), to($colour-primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        transition: opacity $anim-duration;
+        &:hover {
+            opacity: 1;
+        }
     }
 }

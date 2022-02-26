@@ -1,29 +1,31 @@
 .restaurant {
-    position: relative;
-
     &__image {
         height: 30rem;
         width: 100%;
         @include img-ratio;
+        z-index: 0;
     }
 
     &__menu {
         width: 100%;
-        margin-top: -10rem;
+
+        // margin-top: -10rem;
         padding: 0 5rem 0 5rem;
-        z-index: 1;
+
+        z-index: 2;
         border-radius: 5rem 5rem 0 0;
-        background-color: lighten($colour-grey,55%);
-        display: flex;
-        flex-direction: column;
+        background-color: darken($colour-white, 5%);
+
+        @include flex-column;
         align-items: center;
 
         &__name {
             width: 100%;
-            display: flex;
-            flex-direction: row;
+
+            @include flex-row;
             align-items: center;
             justify-content: space-between;
+
             h1 {
                 font-size: 5rem;
             }
@@ -31,97 +33,111 @@
 
         &__body {
             width: 100%;
+
             @include desktop-only {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-around;
                 flex-wrap: wrap;
             }
         }
-        
     }
 }
 
 .meal {
-    max-width: 70rem;
-    width: 90%;
+    width: $mobile-block-width;
+    max-width: $mobile-block-max-width;
     margin: auto;
 
     h2 {
-        animation: appear $anim-duration * 2 3s both;
         text-transform: uppercase;
         font-weight: 400;
         font-size: 3rem;
+
         position: relative;
+
+        animation: appear $anim-duration * 2 3s both;
+
         &::after {
             content: "";
             width: 8rem;
             height: 0.5rem;
+
             background-color: $colour-tertiary;
+
             position: absolute;
             left: 2rem;
             bottom: 1rem;
         }
     }
-    a {
-        display: flex;
-        flex-direction: row;
+
+    &__dish {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+
+        cursor: pointer;
+
         overflow: hidden;
         margin: 3rem;
         @include round(3rem);
-        background-color: white;
-        @include shadow(darken($colour-white,30%));
-        &:hover {
-            & .meal__tick {
-                flex: 1.5;
-                i {
-                    transform: rotate(2turn);
-                }
-            }
-            
-        }
-    }
-    
-    &__dish {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        flex: 4;
+
+        background-color: $colour-white;
+        @include shadow(darken($colour-white, 30%));
+
         animation: appear $anim-duration * 2 both;
         @for $i from 1 through 4 {
             &--#{$i} {
                 animation-delay: 3s + $anim-delay * $i;
-            } 
+            }
         }
 
-        &__name {
-            padding: 2rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        &__block {
+            width: 100%;
+
+            @include flex-row;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            transition: width 0.5s;
+
+            &__name {
+                padding: 2rem;
+                @include ellipsis;
+            }
+
+            &__price {
+                padding: 2rem;
+            }
         }
 
-        &__price {
-            padding: 2rem;
-        }
-    }
+        &__check {
+            width: 0;
+            
+            background-color: $colour-tertiary;
+            
+            transition: width 0.5s;
 
-    &__tick {
-        margin-right: -10rem;
-        background-color: $colour-tertiary;
-        flex: 0;
-        transition: flex 0.5s;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-left: 2rem;
-        i {
-            color: white;
-            font-size: 4rem;
-            transition: transform 0.5s;
-            transform: rotate(0turn);
+            i {
+                padding: 5rem;
+                font-size: 5rem;
+
+                color: $colour-white;
+                
+                transition: transform 0.5s;
+                transform: rotate(0turn);
+            }
+        }
+
+        &:hover {
+            .meal__dish__block {
+                width: 80%;
+            }
+            .meal__dish__check {
+                width: 20%;
+                i {
+                    transform: rotate(-1turn);
+                }
+            }
         }
     }
 }
