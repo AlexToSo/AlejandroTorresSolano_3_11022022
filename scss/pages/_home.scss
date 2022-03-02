@@ -120,6 +120,21 @@ main {
     @include desktop-only {
         width: 65rem;
     }
+    &--new {
+        position: relative;
+        &::after {
+            content: "Nouveau";
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            background-color: $colour-tertiary;
+            color: darken($colour-tertiary,30%);
+            font-weight: 700;
+            font-size: 2rem;
+            padding: 0 2rem 0 2rem;
+            @include round(.5rem);
+        }
+    }
 }
 
 .heart {
@@ -127,6 +142,7 @@ main {
     top: 30%;
     right: 3rem;
     text-align: center;
+    color: $colour-grey;
 
     .fa-heart {
         font-size: 5rem;

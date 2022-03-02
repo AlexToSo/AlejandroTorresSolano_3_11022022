@@ -9,6 +9,9 @@
 html {
     // 10px div by def of 16px
     font-size: 62.5%;
+    @include desktop-only {
+        font-size: 30%;
+    }
 }
 
 body {
