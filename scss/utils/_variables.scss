@@ -9,12 +9,11 @@ $colour-grey-bg: lighten($colour-black,25%);
 $shadow-size: 0.5rem;
 $border-radius: 5rem;
 
-$mobile-block-width: 90%;
 $mobile-block-max-width: 70rem;
 
 $anim-duration: 250ms;
 $anim-delay: 100ms;
 
 $breakpoints: (
-    mobile: 992px
+    mobile: 1100px
 );

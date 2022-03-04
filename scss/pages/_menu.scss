@@ -1,19 +1,21 @@
 .restaurant {
+    position: relative;
     &__image {
         height: 30rem;
         width: 100%;
         @include img-ratio;
-        z-index: 0;
+        overflow: hidden;
     }
 
     &__menu {
         width: 100%;
 
-        margin-top: -10rem;
+        margin-top: -5rem;
         padding: 0 5rem 0 5rem;
 
         z-index: 2;
-        border-radius: 5rem 5rem 0 0;
+        border-radius: 7rem 7rem 0 0;
+        border-top: 4rem solid darken($colour-white, 5%);
         background-color: darken($colour-white, 5%);
 
         @include flex-column;
@@ -21,6 +23,7 @@
 
         &__name {
             width: 100%;
+            max-width: $mobile-block-max-width;
 
             @include flex-row;
             align-items: center;
@@ -28,6 +31,7 @@
 
             h1 {
                 font-size: 5rem;
+                padding: 2rem 0 2rem 0;
             }
         }
 
@@ -44,7 +48,6 @@
 }
 
 .meal {
-    width: $mobile-block-width;
     max-width: $mobile-block-max-width;
     margin: auto;
 
@@ -52,6 +55,8 @@
         text-transform: uppercase;
         font-weight: 400;
         font-size: 3rem;
+
+        padding: 2rem 0 2rem 0;
 
         position: relative;
 
@@ -65,7 +70,7 @@
             background-color: $colour-tertiary;
 
             position: absolute;
-            left: 2rem;
+            left: 0;
             bottom: 1rem;
         }
     }
@@ -78,7 +83,7 @@
         cursor: pointer;
 
         overflow: hidden;
-        margin: 3rem;
+        margin: 3rem 0 3rem 0;
         @include round(3rem);
 
         background-color: $colour-white;
@@ -102,7 +107,10 @@
 
             &__name {
                 padding: 2rem;
-                @include ellipsis;
+                overflow: hidden;
+                h3, p {
+                    @include ellipsis;
+                }
             }
 
             &__price {

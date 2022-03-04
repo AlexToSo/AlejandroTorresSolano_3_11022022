@@ -6,6 +6,10 @@
     position: relative;
     @include shadow($colour-grey);
 
+    h1 {
+        padding: 2rem;
+    }
+
     &__arrow {
         position: absolute;
         top: 25%;

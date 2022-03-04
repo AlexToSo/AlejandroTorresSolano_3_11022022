@@ -1,14 +1,14 @@
 footer{
     @include color-layout($colour-grey-bg);
+    padding: 5rem;
+
+    @include flex-column;
+    align-items: center;
 }
 
 .footer {
-    width: $mobile-block-width;
+    width: 100%;
     max-width: $mobile-block-max-width;
-    
-    margin: auto;
-    @include flex-column;
-    align-items: flex-start;
 
     h1 {
         font-size: 4rem;

@@ -27,14 +27,19 @@
 }
 
 .operation {
-    width: $mobile-block-width;
-    max-width: $mobile-block-max-width;
+    width: 100%;
 
-    margin: auto;
-    padding: 5rem 0 5rem 0;
+    padding: 5rem;
+
+    @include flex-column;
+    align-items: center;
+
+    & > div {
+        width: 100%;
+        max-width: $mobile-block-max-width;
+    }
 
     &__block {
-        @include flex-column;
 
         &__item {
             @include list-item;
@@ -51,8 +56,9 @@
     }
 
     @include desktop-only {
-        max-width: 100%;
-
+        & > div {
+            max-width: 100%;
+        }
         &__block {
             @include flex-row;
             justify-content: space-around;
@@ -68,17 +74,26 @@
 
 main {
     background-color: darken($colour-white, 5%);
+    @include flex-column;
+    align-items: center;
+}
+
+.index {
+    padding: 0 5rem 0 5rem;
 }
 
 .restaurants {
-    width: $mobile-block-width;
-    max-width: $mobile-block-max-width - 5rem;
+    width: 100%;
 
-    margin: auto;
-    padding: 5rem 0 5rem 0;
+    padding-top: 5rem;
+
+    max-width: $mobile-block-max-width;
+
 
     & > div {
         @include flex-column;
+        margin: auto;
+        width: 100%;
     }
 
     @include desktop-only {
@@ -93,8 +108,8 @@ main {
 }
 
 .rest-prev {
-    margin: 2.5rem 0 2.5rem 0;
-
+    margin: 3rem 0 3rem 0;
+    
     background-color: $colour-white;
 
     overflow: hidden;
@@ -110,11 +125,11 @@ main {
         padding: 2rem;
 
         position: relative;
-        // @include flex-row;
-        // justify-content: space-between;
-        // align-items: center;
 
-        // @include ellipsis;
+        overflow: hidden;
+        h3, p {
+            @include ellipsis;
+        }
     }
 
     @include desktop-only {

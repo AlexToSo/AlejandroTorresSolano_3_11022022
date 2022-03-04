@@ -58,8 +58,8 @@
 @mixin list-item($colour: darken($colour-white, 5%)) {
     @include flex-row;
     align-items: center;
-    width: $mobile-block-width;
-    margin: 3rem;
+    width: 100%;
+    margin: 3rem 0 3rem 0;
     padding: 3rem;
     @include round;
     @include shadow(darken($colour-white, 30%));

@@ -205,7 +205,7 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1100px) {
   html {
     font-size: 30%;
   }
@@ -227,14 +227,12 @@ h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 6rem;
   font-weight: 400;
-  margin: 2rem;
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
   font-size: 5rem;
   font-weight: 700;
-  padding: 2rem;
 }
 
 h3 {
@@ -338,6 +336,10 @@ ul {
           box-shadow: 0 0.5rem 2rem #656565;
 }
 
+.header h1 {
+  padding: 2rem;
+}
+
 .header__arrow {
   position: absolute;
   top: 25%;
@@ -377,12 +379,7 @@ footer {
 footer {
   color: #FFF;
   background-color: #404040;
-}
-
-.footer {
-  width: 90%;
-  max-width: 70rem;
-  margin: auto;
+  padding: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,9 +387,14 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  width: 100%;
+  max-width: 70rem;
 }
 
 .footer h1 {
@@ -417,7 +419,7 @@ footer {
   padding-right: 2rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1100px) {
   .footer {
     max-width: 100%;
   }
@@ -478,8 +480,8 @@ footer {
   position: absolute;
   top: 10%;
   left: 20%;
-  width: 12rem;
-  height: 3rem;
+  width: 120px;
+  height: 30px;
   background: #9356DC;
   -webkit-animation: loader-steak 3000ms both;
           animation: loader-steak 3000ms both;
@@ -527,13 +529,8 @@ footer {
 }
 
 .operation {
-  width: 90%;
-  max-width: 70rem;
-  margin: auto;
-  padding: 5rem 0 5rem 0;
-}
-
-.operation__block {
+  width: 100%;
+  padding: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,6 +538,14 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.operation > div {
+  width: 100%;
+  max-width: 70rem;
 }
 
 .operation__block__item {
@@ -554,8 +559,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  margin: 3rem;
+  width: 100%;
+  margin: 3rem 0 3rem 0;
   padding: 3rem;
   border-radius: 5rem;
   -webkit-box-shadow: 0 0.5rem 2rem #b3b3b3;
@@ -600,8 +605,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  margin: 3rem;
+  width: 100%;
+  margin: 3rem 0 3rem 0;
   padding: 3rem;
   border-radius: 5rem;
   -webkit-box-shadow: 0 0.5rem 2rem #b3b3b3;
@@ -627,8 +632,8 @@ footer {
   font-size: 3rem;
 }
 
-@media screen and (min-width: 992px) {
-  .operation {
+@media screen and (min-width: 1100px) {
+  .operation > div {
     max-width: 100%;
   }
   .operation__block {
@@ -654,13 +659,26 @@ footer {
 
 main {
   background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.index {
+  padding: 0 5rem 0 5rem;
 }
 
 .restaurants {
-  width: 90%;
-  max-width: 65rem;
-  margin: auto;
-  padding: 5rem 0 5rem 0;
+  width: 100%;
+  padding-top: 5rem;
+  max-width: 70rem;
 }
 
 .restaurants > div {
@@ -671,9 +689,11 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto;
+  width: 100%;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1100px) {
   .restaurants {
     max-width: 100%;
   }
@@ -693,7 +713,7 @@ main {
 }
 
 .rest-prev {
-  margin: 2.5rem 0 2.5rem 0;
+  margin: 3rem 0 3rem 0;
   background-color: #FFF;
   overflow: hidden;
   border-radius: 5rem;
@@ -719,9 +739,17 @@ main {
 .rest-prev__text {
   padding: 2rem;
   position: relative;
+  overflow: hidden;
 }
 
-@media screen and (min-width: 992px) {
+.rest-prev__text h3, .rest-prev__text p {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 1100px) {
   .rest-prev {
     width: 65rem;
   }
@@ -778,12 +806,16 @@ main {
   opacity: 1;
 }
 
+.restaurant {
+  position: relative;
+}
+
 .restaurant__image {
   height: 30rem;
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: 0;
+  overflow: hidden;
 }
 
 .restaurant__image img {
@@ -797,10 +829,11 @@ main {
 
 .restaurant__menu {
   width: 100%;
-  margin-top: -10rem;
+  margin-top: -5rem;
   padding: 0 5rem 0 5rem;
   z-index: 2;
-  border-radius: 5rem 5rem 0 0;
+  border-radius: 7rem 7rem 0 0;
+  border-top: 4rem solid #f2f2f2;
   background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,6 +849,7 @@ main {
 
 .restaurant__menu__name {
   width: 100%;
+  max-width: 70rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,13 +867,14 @@ main {
 
 .restaurant__menu__name h1 {
   font-size: 5rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .restaurant__menu__body {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1100px) {
   .restaurant__menu__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -856,7 +891,6 @@ main {
 }
 
 .meal {
-  width: 90%;
   max-width: 70rem;
   margin: auto;
 }
@@ -865,6 +899,7 @@ main {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 3rem;
+  padding: 2rem 0 2rem 0;
   position: relative;
   -webkit-animation: appear 500ms 3s both;
           animation: appear 500ms 3s both;
@@ -876,7 +911,7 @@ main {
   height: 0.5rem;
   background-color: #99E2D0;
   position: absolute;
-  left: 2rem;
+  left: 0;
   bottom: 1rem;
 }
 
@@ -896,7 +931,7 @@ main {
           justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
-  margin: 3rem;
+  margin: 3rem 0 3rem 0;
   border-radius: 3rem;
   background-color: #FFF;
   -webkit-box-shadow: 0 0.5rem 2rem #b3b3b3;
@@ -947,6 +982,10 @@ main {
 
 .meal__dish__block__name {
   padding: 2rem;
+  overflow: hidden;
+}
+
+.meal__dish__block__name h3, .meal__dish__block__name p {
   white-space: nowrap;
   overflow: hidden;
   -o-text-overflow: ellipsis;
